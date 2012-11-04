@@ -47,8 +47,7 @@ make check
 
 %files  -n libyaml
 %defattr(-,root,root,-)
-%{_libdir}/libyaml-0.so.2
-%{_libdir}/libyaml-0.so.2.0.1
+%{_libdir}/libyaml-0.so.*
 
 %files devel
 %defattr(-,root,root,-)
