@@ -53,5 +53,6 @@ make check
 %defattr(-,root,root,-)
 %{_includedir}/yaml.h
 %{_libdir}/libyaml.so
+%{_libdir}/pkgconfig/yaml-0.1.pc
 
 %changelog
