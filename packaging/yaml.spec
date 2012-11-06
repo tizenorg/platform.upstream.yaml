@@ -20,7 +20,7 @@ A YAML 1.1 parser and emitter written in C
 %package devel
 License:        MIT
 Group:          Development/Libraries/C and C++
-Requires:       %{name} = %{version}
+Requires:       libyaml = %{version}
 Summary:        Development files for libyaml
 
 %description devel
