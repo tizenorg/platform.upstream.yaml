@@ -49,7 +49,7 @@ make check
 %defattr(-,root,root,-)
 %{_libdir}/libyaml-0.so.*
 
-%files libyaml-devel
+%files -n libyaml-devel
 %defattr(-,root,root,-)
 %{_includedir}/yaml.h
 %{_libdir}/libyaml.so
