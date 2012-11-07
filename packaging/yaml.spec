@@ -17,13 +17,13 @@ Summary:        A YAML 1.1 parser and emitter written in C
 %description -n libyaml
 A YAML 1.1 parser and emitter written in C
 
-%package devel
+%package -n libyaml-devel
 License:        MIT
 Group:          Development/Libraries/C and C++
 Requires:       libyaml = %{version}
 Summary:        Development files for libyaml
 
-%description devel
+%description -n libyaml-devel
 A YAML 1.1 parser and emitter written in C
 
 This package holds the development files for libyaml.
@@ -49,7 +49,7 @@ make check
 %defattr(-,root,root,-)
 %{_libdir}/libyaml-0.so.*
 
-%files devel
+%files libyaml-devel
 %defattr(-,root,root,-)
 %{_includedir}/yaml.h
 %{_libdir}/libyaml.so
