@@ -6,6 +6,7 @@ Group:          Development/Libraries/C and C++
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Url:            http://pyyaml.org/wiki/LibYAML
 Source:         http://pyyaml.org/download/libyaml/yaml-%{version}.tar.gz
+Source1001: 	yaml.manifest
 Summary:        A YAML 1.1 parser and emitter written in C
 %description
 A YAML 1.1 parser and emitter written in C
@@ -30,6 +31,7 @@ This package holds the development files for libyaml.
 
 %prep
 %setup -n %{name}-%{version}
+cp %{SOURCE1001} .
 
 %build
 %configure --with-pic --disable-static
@@ -46,10 +48,12 @@ make check
 %postun -n libyaml -p /sbin/ldconfig
 
 %files  -n libyaml
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/libyaml-0.so.*
 
 %files -n libyaml-devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_includedir}/yaml.h
 %{_libdir}/libyaml.so
